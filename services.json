@@ -1,0 +1,239 @@
+{
+  "services": [
+    {
+      "id": "ac-repair",
+      "name": "AC Repair & Servicing",
+      "category": "ac",
+      "base_price": 399,
+      "duration": "45 Mins",
+      "warranty": "30-Day Warranty",
+      "active": true,
+      "description": "High-pressure indoor deep jet cleaning, foam wash, gas leak detection, PCB diagnosis, capacitor replacement & cooling restoration.",
+      "tasks": [
+        {
+          "name": "AC Deep Jet Wash & Cleaning",
+          "price": 399
+        },
+        {
+          "name": "AC Gas Check & Leakage Refill",
+          "price": 1499
+        },
+        {
+          "name": "AC Not Cooling / Less Airflow Fix",
+          "price": 499
+        },
+        {
+          "name": "Complete Split AC Installation",
+          "price": 1199
+        },
+        {
+          "name": "Window AC Comprehensive Service",
+          "price": 449
+        }
+      ]
+    },
+    {
+      "id": "plumbing",
+      "name": "Plumbing Repairs & Fitting",
+      "category": "plumbing",
+      "base_price": 149,
+      "duration": "30 Mins",
+      "warranty": "30-Day Warranty",
+      "active": true,
+      "description": "Expert plumbers for leaking pipes, designer faucet installation, flush cistern fix, bathroom drain unblocking, sink waste coupling & water pump repairs.",
+      "tasks": [
+        {
+          "name": "Tap / Faucet Leakage or Replacement",
+          "price": 149
+        },
+        {
+          "name": "Flush Cistern & Tank Repair",
+          "price": 299
+        },
+        {
+          "name": "Basin / Sink Blockage Removal",
+          "price": 249
+        },
+        {
+          "name": "Water Pipe Concealed Leakage Fix",
+          "price": 399
+        },
+        {
+          "name": "Shower / Mixer Installation",
+          "price": 299
+        }
+      ]
+    },
+    {
+      "id": "electrical",
+      "name": "Electrician & Wiring Fixes",
+      "category": "electrical",
+      "base_price": 149,
+      "duration": "30 Mins",
+      "warranty": "30-Day Warranty",
+      "active": true,
+      "description": "Certified electricians equipped with digital multimeters for MCB tripping, loose wiring, fan regulator/motor repair, chandelier installation & earthing issues.",
+      "tasks": [
+        {
+          "name": "Ceiling Fan Repair / Regulating Fix",
+          "price": 149
+        },
+        {
+          "name": "Switchboard / Socket Replacement",
+          "price": 149
+        },
+        {
+          "name": "MCB Tripping & Short Circuit Fix",
+          "price": 299
+        },
+        {
+          "name": "Chandelier / Fancy Light Hanging",
+          "price": 349
+        },
+        {
+          "name": "Inverter / Home Wiring Diagnosis",
+          "price": 399
+        }
+      ]
+    },
+    {
+      "id": "carpentry",
+      "name": "Carpentry & Furniture Fix",
+      "category": "carpentry",
+      "base_price": 199,
+      "duration": "45 Mins",
+      "warranty": "30-Day Warranty",
+      "active": true,
+      "description": "Precision woodworkers for door lock installation, hydraulic hinge adjustment, squeaky doors, modular drawer channels, and IKEA/online furniture assembly.",
+      "tasks": [
+        {
+          "name": "Main Door Lock Fix or Installation",
+          "price": 299
+        },
+        {
+          "name": "Wardrobe Hydraulic Hinge Alignment",
+          "price": 199
+        },
+        {
+          "name": "Bed / Table Furniture Assembly",
+          "price": 499
+        },
+        {
+          "name": "Drawer Channel & Handle Replacement",
+          "price": 249
+        }
+      ]
+    },
+    {
+      "id": "washing-machine",
+      "name": "Washing Machine Repair",
+      "category": "appliances",
+      "base_price": 299,
+      "duration": "60 Mins",
+      "warranty": "30-Day Warranty",
+      "active": true,
+      "description": "Specialized diagnostics for LG, Samsung, Whirlpool, Bosch & IFB. Fixes drum vibration, water not draining, spin cycle failure, belt snaps & motherboard errors.",
+      "tasks": [
+        {
+          "name": "Water Drain / Pump Issue (No Drain)",
+          "price": 299
+        },
+        {
+          "name": "Drum Vibration / Unbalanced Spin Fix",
+          "price": 349
+        },
+        {
+          "name": "Machine Not Starting / Motherboard PCB",
+          "price": 499
+        },
+        {
+          "name": "Complete Machine Deep Cleaning / Descale",
+          "price": 449
+        }
+      ]
+    },
+    {
+      "id": "refrigerator",
+      "name": "Refrigerator & Deep Freezer",
+      "category": "appliances",
+      "base_price": 299,
+      "duration": "60 Mins",
+      "warranty": "30-Day Warranty",
+      "active": true,
+      "description": "Comprehensive repair for Single Door, Double Door, and Side-by-Side Inverter fridges. Thermostat calibration, defrost heater fix, relay change & eco gas charging.",
+      "tasks": [
+        {
+          "name": "Fridge Not Cooling / Less Cooling Fix",
+          "price": 299
+        },
+        {
+          "name": "Defrost Heater / Thermostat Issue",
+          "price": 399
+        },
+        {
+          "name": "Eco Refrigerant Gas Charging",
+          "price": 1299
+        },
+        {
+          "name": "Compressor & Starter Relay Diagnostic",
+          "price": 499
+        }
+      ]
+    },
+    {
+      "id": "cleaning",
+      "name": "Deep Home & Bathroom Cleaning",
+      "category": "cleaning",
+      "base_price": 499,
+      "duration": "90 Mins",
+      "warranty": "100% Satisfaction",
+      "active": true,
+      "description": "Industrial-grade single-disc scrubbing machines, non-corrosive hard-water stain removal, oil/grease chimney degreasing & fabric shampoo extraction.",
+      "tasks": [
+        {
+          "name": "Intense Bathroom Deep Descaling & Clean",
+          "price": 499
+        },
+        {
+          "name": "Kitchen Chimney & Counter Degreasing",
+          "price": 699
+        },
+        {
+          "name": "Sofa & Mattress Wet Extraction Clean",
+          "price": 799
+        }
+      ]
+    },
+    {
+      "id": "pest-control",
+      "name": "Herbal Pest Control",
+      "category": "cleaning",
+      "base_price": 599,
+      "duration": "45 Mins",
+      "warranty": "90-Day Protection",
+      "active": true,
+      "description": "100% safe, pet-friendly and child-safe Bayer herbal gel treatment. No need to empty kitchen cabinets or vacate home. Guaranteed pest eradication.",
+      "tasks": [
+        {
+          "name": "100% Odorless Herbal Cockroach Gel",
+          "price": 599
+        },
+        {
+          "name": "Intense Bed Bug Thermal & Spray Defense",
+          "price": 899
+        },
+        {
+          "name": "Drill-Fill-Seal Termite Protection",
+          "price": 1299
+        }
+      ]
+    }
+  ],
+  "contact": {
+    "phone": "+91 9460809860",
+    "whatsapp": "919460809860",
+    "email": "care@apnagharfix.com",
+    "hours": "7:00 AM - 11:00 PM (Everyday)"
+  },
+  "updated_at": "2026-10-04T09:31:23.034921+00:00"
+}
