@@ -6,8 +6,8 @@
 let WEBSITE_CONFIG = {
   services: [],
   contact: {
-    phone: "+91 9460809860",
-    whatsapp: "919460809860",
+    phone: "+91 8000104808",
+    whatsapp: "918000104808",
     hours: "7:00 AM - 11:00 PM (Everyday)"
   }
 };
@@ -199,7 +199,7 @@ async function loadServicesData() {
    Contact Information Sync
    -------------------------------------------------------------------------- */
 function updateContactInfo() {
-  const wa = WEBSITE_CONFIG.contact.whatsapp || "919460809860";
+  const wa = WEBSITE_CONFIG.contact.whatsapp || "918000104808";
   const hours = WEBSITE_CONFIG.contact.hours || "7:00 AM - 11:00 PM (Everyday)";
 
   const headerWa = document.getElementById('headerWhatsappBtn');
@@ -309,7 +309,7 @@ function handleHeroBooking(e) {
   const city = document.getElementById('heroCity').value;
   const area = document.getElementById('heroArea').value.trim();
   const price = document.getElementById('standardPriceDisplay').textContent;
-  const waNumber = WEBSITE_CONFIG.contact.whatsapp || '919460809860';
+  const waNumber = WEBSITE_CONFIG.contact.whatsapp || '918000104808';
 
   const message = `Hi Apna Ghar Fix Vala! 👋\nI would like to book a doorstep repair:\n\n🛠️ *Service:* ${serviceName}\n🔧 *Task:* ${subTask}\n📍 *Location:* ${area}, ${city}\n💰 *Standard Rate:* ${price}\n\nPlease confirm availability and technician arrival time. Thank you!`;
 
@@ -325,7 +325,7 @@ function renderServicesCatalog() {
   if (!grid) return;
 
   grid.innerHTML = '';
-  const waNumber = WEBSITE_CONFIG.contact.whatsapp || '919460809860';
+  const waNumber = WEBSITE_CONFIG.contact.whatsapp || '918000104808';
 
   WEBSITE_CONFIG.services.forEach((s) => {
     if (s.active === false) return;
@@ -388,7 +388,7 @@ function bookDirectService(serviceId) {
   if (!service) return;
 
   const city = document.getElementById('citySelect') ? document.getElementById('citySelect').value : 'Mumbai';
-  const waNumber = WEBSITE_CONFIG.contact.whatsapp || '919460809860';
+  const waNumber = WEBSITE_CONFIG.contact.whatsapp || '918000104808';
 
   const message = `Hi Apna Ghar Fix Vala! 👋\nI want to book the following service:\n\n🛠️ *Service:* ${service.name}\n📍 *City:* ${city}\n💰 *Standard Rate:* Starts ₹${service.base_price}\n🛡️ *Warranty:* ${service.warranty || '30-Day Warranty'}\n\nPlease share the earliest available technician slot today.`;
 
@@ -490,7 +490,7 @@ function bookFromCalc() {
   const taskName = taskSelect ? taskSelect.value : 'Standard Fix';
   const qty = calcQuantity;
   const finalPrice = document.getElementById('calcFinalPrice').textContent;
-  const waNumber = WEBSITE_CONFIG.contact.whatsapp || '919460809860';
+  const waNumber = WEBSITE_CONFIG.contact.whatsapp || '918000104808';
 
   const message = `Hi Apna Ghar Fix Vala! 👋\nI calculated my repair rate using your website estimator:\n\n🛠️ *Service:* ${serviceName}\n🔧 *Task:* ${taskName} (Qty: ${qty})\n💰 *Standard Total:* ${finalPrice}\n\nPlease book a technician visit for me.`;
 
@@ -515,7 +515,7 @@ function checkServiceArea() {
 
   const match = COVERAGE_LOCALITIES.some((loc) => query.includes(loc) || loc.includes(query));
   const isPincode = /^\d{6}$/.test(query);
-  const waNumber = WEBSITE_CONFIG.contact.whatsapp || '919460809860';
+  const waNumber = WEBSITE_CONFIG.contact.whatsapp || '918000104808';
 
   if (match || isPincode) {
     resultBox.className = 'area-status-result active text-success';

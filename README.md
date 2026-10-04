@@ -9,7 +9,7 @@ Designed specifically for marketing campaigns (Google Ads, Meta Ads, WhatsApp St
 ## 🚀 Key Features
 
 1. **Direct WhatsApp-First Booking Integration**:
-   - 1-Click WhatsApp booking pre-populating customer choice, service, city, area, and promo code directly to the business WhatsApp number `+91 9460809860`.
+   - 1-Click WhatsApp booking pre-populating customer choice, service, city, area, and promo code directly to the business WhatsApp number `+91 8000104808`.
    - Floating interactive WhatsApp support bubble with live ping.
    - Sticky mobile action bar (Call + WhatsApp Booking).
 
@@ -76,7 +76,7 @@ npx vercel --prod
 
 ## 📱 WhatsApp Bot & Support Number
 
-- **Phone Number**: `+91 9460809860`
-- **WhatsApp Web Link**: `https://wa.me/919460809860`
+- **Phone Number**: `+91 8000104808`
+- **WhatsApp Web Link**: `https://wa.me/918000104808`
 
 © 2026 Apna Ghar Fix Vala (AGFV). All rights reserved.
