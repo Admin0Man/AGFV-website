@@ -27,6 +27,16 @@ let calcQuantity = 1;
 document.addEventListener('DOMContentLoaded', () => {
   initMobileDrawer();
   loadServicesData();
+
+  const pincodeInput = document.getElementById('pincodeSearch');
+  if (pincodeInput) {
+    pincodeInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        checkServiceArea();
+      }
+    });
+  }
 });
 
 /* --------------------------------------------------------------------------
@@ -271,7 +281,7 @@ function onHeroCategoryChange() {
   const service = WEBSITE_CONFIG.services.find((s) => s.id === selectedId) || WEBSITE_CONFIG.services[0];
 
   subSelect.innerHTML = '';
-  if (service && service.tasks) {
+  if (service && service.tasks && service.tasks.length > 0) {
     service.tasks.forEach((t) => {
       const opt = document.createElement('option');
       opt.value = t.name;
@@ -279,6 +289,12 @@ function onHeroCategoryChange() {
       opt.textContent = `${t.name} — ₹${t.price}`;
       subSelect.appendChild(opt);
     });
+  } else {
+    const opt = document.createElement('option');
+    opt.value = 'General Inspection / Repair';
+    opt.dataset.price = service ? service.base_price : 199;
+    opt.textContent = `General Inspection / Repair — ₹${service ? service.base_price : 199}`;
+    subSelect.appendChild(opt);
   }
 
   const warrantyPill = document.getElementById('heroWarrantyPill');
@@ -336,8 +352,14 @@ function renderServicesCatalog() {
 
     // Media element: image or styled graphic
     let mediaHtml = '';
-    if (s.image) {
-      mediaHtml = `<img src="${s.image}" alt="${s.name}" loading="lazy" width="400" height="250">`;
+    const defaultImages = {
+      'ac-repair': 'images/ac-service.jpg',
+      'plumbing': 'images/plumbing-service.jpg',
+      'electrical': 'images/hero-technician.jpg'
+    };
+    const resolvedImage = s.image || defaultImages[s.id];
+    if (resolvedImage) {
+      mediaHtml = `<img src="${resolvedImage}" alt="${s.name}" loading="lazy" width="400" height="250">`;
     } else {
       let icon = '🛠️';
       let bgClass = 'carpentry-bg';
@@ -403,10 +425,14 @@ function filterServices(category) {
   const cards = document.querySelectorAll('.service-card');
   const tabs = document.querySelectorAll('.tab-btn');
 
-  tabs.forEach((tab) => tab.classList.remove('active'));
-  if (window.event && window.event.target) {
-    window.event.target.classList.add('active');
-  }
+  tabs.forEach((tab) => {
+    const onclickStr = tab.getAttribute('onclick') || '';
+    if (onclickStr.includes(`'${category}'`)) {
+      tab.classList.add('active');
+    } else {
+      tab.classList.remove('active');
+    }
+  });
 
   cards.forEach((card) => {
     if (category === 'all' || card.dataset.category === category) {
@@ -446,7 +472,7 @@ function updateCalcServices() {
   const service = WEBSITE_CONFIG.services.find((s) => s.id === selectedId) || WEBSITE_CONFIG.services[0];
 
   taskSelect.innerHTML = '';
-  if (service && service.tasks) {
+  if (service && service.tasks && service.tasks.length > 0) {
     service.tasks.forEach((t) => {
       const opt = document.createElement('option');
       opt.value = t.name;
@@ -454,6 +480,12 @@ function updateCalcServices() {
       opt.textContent = `${t.name} (₹${t.price})`;
       taskSelect.appendChild(opt);
     });
+  } else if (service) {
+    const opt = document.createElement('option');
+    opt.value = 'General Repair / Inspection';
+    opt.dataset.price = service.base_price;
+    opt.textContent = `General Repair / Inspection (₹${service.base_price})`;
+    taskSelect.appendChild(opt);
   }
 
   runLiveCalculation();
