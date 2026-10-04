@@ -1,0 +1,22 @@
+{
+  "name": "agfv-website",
+  "version": "1.0.0",
+  "description": "Official promotional and instant booking website for Apna Ghar Fix Vala (AGFV)",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "apna-ghar-fix-vala",
+    "home-repairs",
+    "whatsapp-booking",
+    "ac-repair",
+    "plumbing",
+    "electrician",
+    "mumbai",
+    "pune"
+  ],
+  "author": "Apna Ghar Fix Vala",
+  "license": "ISC"
+}
