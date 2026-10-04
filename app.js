@@ -199,35 +199,37 @@ async function loadServicesData() {
    Contact Information Sync
    -------------------------------------------------------------------------- */
 function updateContactInfo() {
-  const phone = WEBSITE_CONFIG.contact.phone || "+91 9460809860";
   const wa = WEBSITE_CONFIG.contact.whatsapp || "919460809860";
   const hours = WEBSITE_CONFIG.contact.hours || "7:00 AM - 11:00 PM (Everyday)";
 
-  // Update phone display elements
-  const ribbonPhone = document.getElementById('ribbonPhoneDisplay');
-  const ribbonLink = document.getElementById('ribbonPhoneLink');
-  if (ribbonPhone) ribbonPhone.textContent = `Helpline: ${phone}`;
-  if (ribbonLink) ribbonLink.href = `tel:${phone}`;
-
-  const drawerCall = document.getElementById('drawerCallBtn');
-  if (drawerCall) {
-    drawerCall.href = `tel:${phone}`;
-    drawerCall.textContent = `📞 Call Helpline: ${phone}`;
+  const headerWa = document.getElementById('headerWhatsappBtn');
+  if (headerWa) {
+    headerWa.href = `https://wa.me/${wa}?text=Hi%20Apna%20Ghar%20Fix%20Vala!%20I%20want%20to%20book%20a%20home%20repair%20service.`;
   }
 
-  const emergCall = document.getElementById('emergencyCallBtn');
-  if (emergCall) {
-    emergCall.href = `tel:${phone}`;
-    emergCall.textContent = `📞 Call Helpline: ${phone}`;
+  const drawerWa = document.getElementById('drawerWaBtn');
+  if (drawerWa) {
+    drawerWa.href = `https://wa.me/${wa}?text=Hi%20Apna%20Ghar%20Fix%20Vala!%20I%20want%20to%20book%20a%20service.`;
   }
 
-  const stickyCall = document.getElementById('mobileStickyCall');
-  if (stickyCall) stickyCall.href = `tel:${phone}`;
+  const heroWa = document.getElementById('heroWhatsappBtn');
+  if (heroWa) {
+    heroWa.href = `https://wa.me/${wa}?text=Hi%20Apna%20Ghar%20Fix%20Vala!%20I%20want%20to%20book%20a%20doorstep%20repair%20service.`;
+  }
 
-  const footerPhone = document.getElementById('footerPhone');
-  if (footerPhone) {
-    footerPhone.href = `tel:${phone}`;
-    footerPhone.textContent = phone;
+  const stickyWa = document.getElementById('mobileStickyWa');
+  if (stickyWa) {
+    stickyWa.href = `https://wa.me/${wa}?text=Hi%20Apna%20Ghar%20Fix%20Vala!%20I%20want%20to%20book%20a%20repair%20service.`;
+  }
+
+  const emergWa = document.getElementById('emergencyWaBtn');
+  if (emergWa) {
+    emergWa.href = `https://wa.me/${wa}?text=EMERGENCY%20REPAIR%20REQUIRED!%20Please%20dispatch%20a%20technician%20immediately.`;
+  }
+
+  const popupWa = document.getElementById('popupWaBtn');
+  if (popupWa) {
+    popupWa.href = `https://wa.me/${wa}?text=Hi%20Apna%20Ghar%20Fix%20Vala!%20I%20need%20help%20with%20a%20home%20repair.`;
   }
 
   const footerWa = document.getElementById('footerWa');
